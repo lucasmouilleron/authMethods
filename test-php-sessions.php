@@ -13,10 +13,8 @@
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <h2>Actions</h2>
-<ul>
-    <li><a href="<?php echo getCurrentURLWithoutParams()?>?action=login&login=my-login&pass=my-password">Login and create session</a></li>
-    <li><a href="<?php echo getCurrentURLWithoutParams()?>?action=logout">Logout and destroy session</a></li>
-</ul>
+<a href="<?php echo getCurrentURLWithoutParams()?>?action=login&login=my-login&pass=my-password" class="btn btn-primary">Login and create session</a> 
+<a href="<?php echo getCurrentURLWithoutParams()?>?action=logout" class="btn btn-danger">Logout and destroy session</a>
 
 <?php
 

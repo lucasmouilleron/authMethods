@@ -10,19 +10,19 @@
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <h2>Actions</h2>
-<ul class="jwt">
-    <li><a href="<?php echo getCurrentURLWithoutParams()?>?action=login&login=my-login&pass=my-password&expire=10">Login and create a 10s valid token</a></li>
-    <li><a href="<?php echo getCurrentURLWithoutParams()?>?action=login&login=my-login&pass=my-password&expire=600">Login and create a 10min valid token</a></li>
-    <li>
-        <form class="form-inline" action="<?php echo getCurrentURLWithoutParams()?>" method="get">
-            <div class="form-group">
-                    <input class="form-control" type="text" name="token" placeholder="A token" value="<?php if (isset($_GET["token"])) echo $_GET["token"]?>" size="30"/>
-            </div>
-            <input type="hidden" name="action" value="test"/>
-            <input class="btn btn-primary" type="submit" name="sumbit" value="test token"/>
-        </form>
-    </li>
-</ul>
+
+<form class="form-inline">
+    <a href="<?php echo getCurrentURLWithoutParams()?>?action=login&login=my-login&pass=my-password&expire=10" class="btn btn-primary">Login and create a 10s valid token</a>
+    <a href="<?php echo getCurrentURLWithoutParams()?>?action=login&login=my-login&pass=my-password&expire=600" class="btn btn-primary">Login and create a 10min valid token</a>
+</form>
+
+<form class="form-inline" action="<?php echo getCurrentURLWithoutParams()?>" method="get">
+    <div class="form-group">
+        <input class="form-control" type="text" name="token" placeholder="A token" value="<?php if (isset($_GET["token"])) echo $_GET["token"]?>" size="30"/>
+    </div>
+    <input type="hidden" name="action" value="test"/>
+    <input class="btn btn-primary" type="submit" name="sumbit" value="test token"/>
+</form>
 
 <?php
 
@@ -50,17 +50,25 @@ switch(@$_GET["action"]) {
 
 
 <?php if (isset($newJWT)):?>
-    <h2>Token created !</h2>
+    <h2>Decoded</h2>
+    <div class="alert alert-success">
+        <p><strong>Token created !</strong></p>
+    </div>
     <p class="well"><?php echo $newJWT?></p>
 <?php endif;?>
 <?php if (isset($decodedJWT)):?>
+    <h2>Decoded</h2>
     <?php if($decodedJWT !== false): ?>
-        <h2>Token decoded and valid !</h2>
-        <p>decoded login -> <?php echo $decodedJWT->login?></p>
+        <div class="alert alert-success">
+            <p><strong>Token decoded and valid !</strong></p>
+            <p>decoded login -> <?php echo $decodedJWT->login?></p>
+        </div>
         <p class="well"><?php echo $_GET["token"]?></p>
     <?php else :?>
-        <h2>Bad token !</h2>
-        <p>Token decoded and is corrupted or expired !</p>
+        <div class="alert alert-danger">
+            <p><strong>Bad token !</strong></p>
+            <p>Token decoded and is corrupted or expired !</p>
+        </div>
     <?php endif;?>
 <?php endif;?>
 
