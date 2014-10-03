@@ -1,0 +1,63 @@
+/*///////////////////////////////////////////////////////////////////////////*/
+/* HELPERS
+/*///////////////////////////////////////////////////////////////////////////*/
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+.hidden {
+    display:none;
+}
+
+.highlight {
+    @include opacity(0.7);
+    @include transition-duration(0.5s);
+    
+    &:hover {   
+        @include opacity(1);
+    }
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+.cf:before, .cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+.loading {
+    height:100%;
+    width:100%;
+    //background-image: url("../img/ajax-loader.gif");
+    background-repeat: no-repeat;
+    background-color:$mediumColor;
+    background-position:50% 50%;
+    @include opacity(0.8);
+    
+    canvas {
+        position:relative;
+        top:50%;
+        left:50%;
+        margin-top:-16px;
+        margin-left:-16px;
+    }
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.text-justify {
+    text-align:justify;
+}
