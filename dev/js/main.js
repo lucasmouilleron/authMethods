@@ -28,6 +28,18 @@ shim: {
 /////////////////////////////////////////////////////////////////////
 require(["jquery", "bootstrap", "console", "tools","toc"], function($) {
     $(function() {
-
+        if($("#toc").length) {
+            $("#toc").affix({
+                offset: {
+                    top: $("#toc").offset().top-$(".navbar").height()
+                }
+            });
+            $("#toc").toc({
+                "selectors": "h1,h2,h3",
+                "container": "#content",
+                "prefix": "toc",
+                "scrollToOffset": 60
+            });
+        }
     });
 });

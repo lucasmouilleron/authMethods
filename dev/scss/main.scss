@@ -46,12 +46,28 @@ em {
 }
 
 .toc-h2 {
-    margin-left:30px;
+    margin-left:20px;
+    font-size: 1em;
+}
+
+.toc-h3 {
+    margin-left:40px;
     font-size: 0.9em;
 }
 
 .affix-top,.affix{
     position: static;
+}
+
+@media (min-width: 600px) {
+    .affix-top {
+        position: static;    
+    }
+
+    .affix {
+        position: fixed;
+        top:60px;
+    }
 }
 
 .well {
