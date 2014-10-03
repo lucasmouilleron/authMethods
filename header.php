@@ -1,4 +1,4 @@
-<?php require_once __DIR__."/../libs/tools.php" ?>
+<?php require_once __DIR__."/libs/tools.php" ?>
 <!DOCTYPE html>
 <head>
 
@@ -27,8 +27,8 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
-          <li class="<?php if(isPage("php-sessions")) echo "active"?>"><a href="php-sessions">PHP sessions</a></li>
-          <li class="<?php if(isPage("jwt")) echo "active"?>"><a href="jwt">JWT</a></li>
+          <li class="<?php if(isPage("test-php-sessions")) echo "active"?>"><a href="test-php-sessions">PHP sessions</a></li>
+          <li class="<?php if(isPage("test-jwt")) echo "active"?>"><a href="test-jwt">JWT</a></li>
         </ul>
       </div>
     </div>

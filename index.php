@@ -1,5 +1,5 @@
 <!-- /////////////////////////////////////////////////////////////// -->
-<?php include "includes/header.php" ?>
+<?php include __DIR__."/header.php" ?>
 
 <!-- /////////////////////////////////////////////////////////////// -->
 <div class="jumbotron">
@@ -11,4 +11,4 @@
 <?php echo mdFileToHTML(README_FILE, true)?>
 
 <!-- /////////////////////////////////////////////////////////////// -->
-<?php include "includes/footer.php" ?>
+<?php include __DIR__."/footer.php" ?>

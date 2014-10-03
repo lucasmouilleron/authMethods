@@ -23,5 +23,43 @@ html,body {
 }
 
 .jumbotron {
-    margin-top:70px;
+    margin-top:80px;
+}
+
+.container {
+    ul {
+        list-style-type: square; 
+        padding-left:20px;
+    }
+}
+
+em {
+    font-style: italic;
+}
+
+.toc-active a {
+    text-decoration: underline;
+}
+
+.toc-h1 {
+
+}
+
+.toc-h2 {
+    margin-left:30px;
+    font-size: 0.9em;
+}
+
+.affix-top,.affix{
+    position: static;
+}
+
+.well {
+    word-wrap: break-word;
+}
+
+.jwt {
+    li {
+        margin:5px 0;
+    } 
 }
