@@ -35,6 +35,17 @@ form {
         list-style-type: square; 
         padding-left:20px;
     }
+
+    ol {
+        list-style-type: decimal;
+        padding-left:20px;   
+    }
+
+    pre {
+        background-color: #fff;
+        border:none;
+        line-height: 1em;
+    }
 }
 
 em {
