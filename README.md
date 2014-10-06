@@ -13,11 +13,11 @@ Here are some possible methods to do so in the case of stateless systems, such a
 Security preambule
 ------------------
 
-###Hash function
+### Hash function
 A `hash function` is any function that can be used to map digital data of arbitrary size to digital data of fixed size, with slight differences in input data producing very big differences in output data. 
 The output of a hash function is called the `hash`.
 
-###Data integrity
+### Data integrity
 A simple way to ensure a piece of data was __not modified when transfered__ from a sender to reciever is to __hash__ it.
 
 This will produce the `signature` of the data.
@@ -27,7 +27,7 @@ The __reciever resigns the data__ and if the signature is the same, the data was
 
 This method _does not guaranty the aunthenticity of the data_, as it can be forged and signed by anyone.
 
-###Digital signing
+### Digital signing
 A `digital signature` is a mathematical scheme for demonstrating the authenticity and integrity of a digital message or document.
 Digital signing involves a `shared secret key`, __known only to the sender and reciever__.
 
@@ -40,7 +40,7 @@ The __reciever re secret signs the data__ (_using the shared secret key_), and i
 
 This simple method _does not encrypt the data_.
 
-###HTTPS
+### HTTPS
 `HTTPS` is `HTTP` over `TLS`.
 It means requests performed with __HTTPS can't be wiretapped__.
 
