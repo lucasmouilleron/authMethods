@@ -177,7 +177,7 @@ An example of implementation is `Json Web Token (JWT)`. They are url-safe (which
     +--------------------+                                       +--------------------+
 
 1. The user __logs in__, for example by providing his `credentials`
-2. The server __validates__ the user `credentials` and __fetches__ some relevant data (such as the _login, the cart, etc._) and __add__ them into a `token`. The `token` is sent back to the user.
+2. The server __validates__ the user `credentials` and __fetches__ some relevant data (such as the _login, etc._) and __add__ them into a `token`. The `token` is sent back to the user.
 3. The `token` is __stored in cookie on the client__ for further usage
 4. For every next call, the `token` is sent. The token can be sent as a `GET parameter` or within the `request header`.
 5. The server __processes__ the request :
