@@ -223,11 +223,11 @@ OAuth
 
 Oauth permits to __grant__ a `consumer` (an app, for example Coca Cola) authorization on behalf of a `resource owner` (a user, for example you) to __perform actions__ on a third party `resource server` (a 3rd party service, for example Facebook).
 
-To do so, the `consumer` __creates an app__ within the `3rd party service` platform. The consummer app comes with a `consumer ID` and a `consumer secret`.
+To do so, the `consumer` __creates an app__ within the `3rd party service` platform. The `consummer` app comes with a `consumer ID` and a `consumer secret`.
 
 The `consumer secret` is never exposed to the `resource owner` and is used only to __authentificate__ the client when requesting the `user access token`.
 
-The consumer then __retrieves__ the `user access token` on behalf of the `resource owner` and sends it along with every call to the `resource server`.
+The `consumer` then __retrieves__ the `user access token` on behalf of the `resource owner` and sends it along with every call to the `resource server`.
 
 This process gives better _flexibility_ for the authentication process and allows __delegation__ :
 
