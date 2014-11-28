@@ -27,6 +27,7 @@
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
+        <li class="<?php if(isPage("index")) echo "active"?>"><a href="index">Doc</a></li>
           <li class="<?php if(isPage("test-php-sessions")) echo "active"?>"><a href="test-php-sessions">PHP sessions</a></li>
           <li class="<?php if(isPage("test-jwt")) echo "active"?>"><a href="test-jwt">JWT</a></li>
         </ul>

@@ -188,6 +188,22 @@ An example of implementation is `Json Web Token (JWT)`. They are url-safe (which
 
 This _JWT flow_ is actually an _OAuth2 staeless implicit flow_ (see below).
 
+### SSO usage
+JWT `token` can be used for __SSO puropose__.
+
+It involves an __authentication server__ and other __services in need of authenticated users__.
+
+- Ideally, the authentication server __register__ services : configuration of the service `redirect page` after login, and the `private shared signing key`
+- Every service must know the authentication server `private shared signing key`
+- When the user __accesses a service__ :
+    - If a JWT `token` is provided (cookie, get param), the service validates the `token` :
+        - If the `token` is _valid_, using the `payload` (email, name, etc.)
+        - If not, redirect to the `authentication server login page`
+    - If no JWT `token` is provided, redirect to the `authentication server login page`
+- When the user __logs in__ on the `authentication server login page` : 
+    - The authentication server __validates the user and produces__ a JWT `token`
+    - The user is then redirected to the `redirect page` of the service with the JWT `token` (get param)
+
 ### Pros
 - Stateless and performance, as the token is self defined and does not need to be stored server side
 - Works easily with multiple language servers (for example PHP <-> nodejs)
