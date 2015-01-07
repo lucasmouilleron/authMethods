@@ -1,6 +1,7 @@
 authMethods
 ===========
 
+
 Authentication
 --------------
 `Authentication` is the process of __confirming identity__.
