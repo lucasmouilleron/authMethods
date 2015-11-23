@@ -1,6 +1,9 @@
 authMethods
 ===========
 
+Client < > Server authentication and authentication transfer methods in the web context.
+
+![Screenshot](http://grabs.lucasmouilleron.com/Screen%20Shot%202015-11-23%20at%2015.32.06.png)
 
 Authentication
 --------------
